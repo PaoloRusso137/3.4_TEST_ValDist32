@@ -30,7 +30,7 @@ logging.info(f"Using {torch.cuda.device_count()} GPUs and {multiprocessing.cpu_c
 #### Creation of Datasets
 logging.debug(f"Loading dataset Pitts30k from folder {args.datasets_folder}")
  
-test_ds = datasets_ws.BaseDataset(args, args.datasets_folder, "pitts30k", "test")
+test_ds = datasets_ws.BaseDataset(args, args.datasets_folder, "st_lucia", "test")
 logging.info(f"Test set: {test_ds}")
  
 #### Initialize model
