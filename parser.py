@@ -28,7 +28,7 @@ def parse_arguments():
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--device", type=str, default="cuda", choices=["cuda", "cpu"])
     parser.add_argument("--num_workers", type=int, default=8, help="num_workers for all dataloaders")
-    parser.add_argument("--val_positive_dist_threshold", type=int, default=25, help="Val/test threshold in meters")
+    parser.add_argument("--val_positive_dist_threshold", type=int, default=32, help="Val/test threshold in meters")
     parser.add_argument("--train_positives_dist_threshold", type=int, default=10, help="Train threshold in meters")
     parser.add_argument('--recall_values', type=int, default=[1, 5, 10, 20], nargs="+",
                         help="Recalls to be computed, such as R@5.")
