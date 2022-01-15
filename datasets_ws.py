@@ -52,7 +52,7 @@ def collate_fn(batch):
 class BaseDataset(data.Dataset):
     """Dataset with images from database and queries, used for inference (testing and building cache).
     """
-    def __init__(self, args, datasets_folder="datasets", dataset_name="pitts30k", split="train"):
+    def __init__(self, args, datasets_folder="datasets", dataset_name="st_lucia", split="train"):
         super().__init__()
         self.args = args
         self.dataset_name = dataset_name
@@ -102,7 +102,7 @@ class TripletsDataset(BaseDataset):
     this is used for example when computing the cache, because it requires
     computing features of each image, not triplets.
     """
-    def __init__(self, args, datasets_folder="datasets", dataset_name="pitts30k", split="train", negs_num_per_query=10):
+    def __init__(self, args, datasets_folder="datasets", dataset_name="st_lucia", split="train", negs_num_per_query=10):
         super().__init__(args, datasets_folder, dataset_name, split)
         self.neg_samples_num = args.neg_samples_num  # Number of negatives to randomly sample
         self.negs_num_per_query = negs_num_per_query  # Number of negatives per query in each batch
